@@ -4,7 +4,8 @@ A Python package to truncate dates and times.
 
 ## References
 
-- [Wolt Python Package Cookiecutter](https://github.com/woltapp/wolt-python-package-cookiecutter)
+- [Wolt Python Package Cookiecutter](https://github.com/woltapp/wolt-python-package-cookiecutter) repo
+- [Delorean](https://delorean.readthedocs.io/en/latest/) package
 
 ## Development
 

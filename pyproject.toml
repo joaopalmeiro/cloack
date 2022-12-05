@@ -20,6 +20,11 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
+# https://github.com/pypi/warehouse/blob/main/warehouse/templates/packaging/detail.html
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/joaopalmeiro/cloack/issues"
+"Changelog" = "https://github.com/joaopalmeiro/cloack/blob/main/CHANGELOG.md"
+
 [tool.poetry.dependencies]
 python = "^3.7"
 

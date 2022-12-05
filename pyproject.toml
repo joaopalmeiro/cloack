@@ -27,6 +27,9 @@ python = "^3.7"
 [tool.poetry.group.dev.dependencies]
 black = "*"
 isort = "*"
+# https://github.com/mschmieder/python-kacl
+# https://github.com/mschmieder/python-kacl#config-file
+python-kacl = "*"
 
 [build-system]
 requires = ["poetry-core"]

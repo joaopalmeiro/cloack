@@ -21,6 +21,9 @@ classifiers = [
 ]
 
 # https://github.com/pypi/warehouse/blob/main/warehouse/templates/packaging/detail.html
+# https://github.com/pypi/warehouse/blob/main/package.json#L20
+# https://github.com/FortAwesome/Font-Awesome/tree/5.13.0/js-packages/@fortawesome/fontawesome-free
+# https://fontawesome.com/v5/search?o=r&m=free
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/joaopalmeiro/cloack/issues"
 "Changelog" = "https://github.com/joaopalmeiro/cloack/blob/main/CHANGELOG.md"

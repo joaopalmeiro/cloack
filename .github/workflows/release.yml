@@ -1,0 +1,40 @@
+# https://github.com/joaopalmeiro/linstall/blob/main/.github/workflows/release.yml
+# https://github.com/salsify/action-detect-and-tag-new-version
+# https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+# https://github.com/hadialqattan/relies-on#how-could-aliens-use-this-action-
+
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "pyproject.toml"
+
+jobs:
+  check_test_status:
+    name: Check the status of the Test workflow
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hadialqattan/relies-on@v1.0.0
+        with:
+          workflow: Test
+
+  build-and-publish:
+    needs: check_test_status
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - uses: ./.github/actions/python-poetry-env
+      - name: Publish to PyPI
+        run: |
+          poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
+          poetry publish --build --no-interaction
+      - name: Detect and tag the new version
+        uses: salsify/action-detect-and-tag-new-version@v2
+        with:
+          version-command: poetry version --short

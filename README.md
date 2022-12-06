@@ -57,4 +57,4 @@ A Python package to truncate dates and times.
   - [actionlint](https://github.com/rhysd/actionlint):
     - Online: https://rhysd.github.io/actionlint/
     - https://github.com/rhysd/actionlint/blob/main/docs/install.md
-    - `brew install actionlint` + `actionlint --help` + `actionlint .github/workflows/*.yml`
+    - `brew install actionlint` + `actionlint --help` + `actionlint .github/workflows/*.yml` or `actionlint -verbose .github/workflows/*.yml`

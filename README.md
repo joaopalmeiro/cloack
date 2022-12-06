@@ -1,5 +1,10 @@
 # cloack
 
+[![PyPI](https://img.shields.io/pypi/v/cloack?style=flat-square)](https://pypi.python.org/pypi/cloack/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cloack?style=flat-square)](https://pypi.python.org/pypi/cloack/)
+[![PyPI - License](https://img.shields.io/pypi/l/cloack?style=flat-square)](https://pypi.python.org/pypi/cloack/)
+[![Coookiecutter - Wolt](https://img.shields.io/badge/cookiecutter-Wolt-00c2e8?style=flat-square&logo=cookiecutter&logoColor=D4AA00&link=https://github.com/woltapp/wolt-python-package-cookiecutter)](https://github.com/woltapp/wolt-python-package-cookiecutter)
+
 A Python package to truncate dates and times.
 
 ## References
@@ -14,6 +19,7 @@ A Python package to truncate dates and times.
 - `poetry run black .` or `poetry run black . --verbose`
 - [Add an entry](https://github.com/mschmieder/python-kacl#add-an-entry-to-an-unreleased-section) to the `CHANGELOG.md` file and manually save it in VS Code to format it.
 - `poetry run kacl-cli verify` or `poetry run kacl-cli verify --json`
+- `poetry run pytest` or `poetry run pytest --verbose`
 
 ## Deployment
 

@@ -5,6 +5,7 @@
 # https://python-poetry.org/docs/#installation
 # https://python-poetry.org/docs/managing-environments/#displaying-the-environment-information
 # https://github.com/woltapp/wolt-python-package-cookiecutter/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/.github/actions/python-poetry-env/action.yml
+# https://github.com/actions/setup-python/issues/526k
 
 name: "python-poetry-env"
 description: "Setup Python + Poetry environment"
@@ -18,7 +19,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-python@v3
+    - uses: actions/setup-python@v4
       with:
         python-version: ${{inputs.python-version}}
     - name: Install Poetry

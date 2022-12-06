@@ -2,7 +2,7 @@
 
 [tool.poetry]
 name = "cloack"
-version = "0.0.1"
+version = "0.1.0"
 description = "A Python package to truncate dates and times."
 authors = ["João Palmeiro <jm.palmeiro@campus.fct.unl.pt>"]
 license = "MIT"

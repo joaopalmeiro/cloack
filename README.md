@@ -24,7 +24,7 @@ A Python package to truncate dates and times.
 ## Deployment
 
 - `poetry version patch` or `poetry version minor`
-- `poetry run kacl-cli release $(poetry version --short) --modify` and manually save it in VS Code to format it
+- `poetry run kacl-cli release $(poetry version --short) --modify` and manually save the `CHANGELOG.md` file in VS Code to format it
 
 ## Notes
 

@@ -17,14 +17,14 @@ A Python package to truncate dates and times.
 - `poetry install`
 - `poetry run isort .` or `poetry run isort . --verbose`
 - `poetry run black .` or `poetry run black . --verbose`
-- [Add an entry](https://github.com/mschmieder/python-kacl#add-an-entry-to-an-unreleased-section) to the `CHANGELOG.md` file and manually save it in VS Code to format it.
+- [Add an entry](https://github.com/mschmieder/python-kacl#add-an-entry-to-an-unreleased-section) to the `CHANGELOG.md` file and manually save it in VS Code to format it
 - `poetry run kacl-cli verify` or `poetry run kacl-cli verify --json`
 - `poetry run pytest` or `poetry run pytest --verbose`
 
 ## Deployment
 
 - `poetry version patch` or `poetry version minor`
-- `poetry run kacl-cli release $(poetry version --short) --modify`
+- `poetry run kacl-cli release $(poetry version --short) --modify` and manually save it in VS Code to format it
 
 ## Notes
 

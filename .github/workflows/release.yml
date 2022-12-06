@@ -13,7 +13,7 @@ on:
     branches:
       - main
     paths:
-      - "pyprsssoject.toml"
+      - "pyproject.toml"
 
 jobs:
   # check_test_status:

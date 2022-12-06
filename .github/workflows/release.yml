@@ -2,6 +2,9 @@
 # https://github.com/salsify/action-detect-and-tag-new-version
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 # https://github.com/hadialqattan/relies-on#how-could-aliens-use-this-action-
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#running-a-workflow-based-on-the-conclusion-of-another-workflow
+# https://github.com/lewagon/wait-on-check-action
+# https://github.com/lewagon/wait-on-check-action/blob/v1.2.0/.github/workflows/wait_omitting-check-name.yml
 
 name: Release
 
@@ -10,21 +13,27 @@ on:
     branches:
       - main
     paths:
-      - "pyproject.toml"
+      - "pyprsssoject.toml"
 
 jobs:
-  check_test_status:
-    name: Check the status of the Test workflow
-    runs-on: ubuntu-latest
-    steps:
-      - uses: hadialqattan/relies-on@v1.0.0
-        with:
-          workflow: Test
-
+  # check_test_status:
+  #   name: Check the status of the Test workflow
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: hadialqattan/relies-on@v1.0.0
+  #       with:
+  #         workflow: Test
   build-and-publish:
-    needs: check_test_status
+    # needs: check_test_status
     runs-on: ubuntu-latest
     steps:
+      - name: Wait for tests to succeed
+        uses: lewagon/wait-on-check-action@v1.2.0
+        with:
+          ref: ${{ github.ref }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          wait-interval: 10 # seconds
+          running-workflow-name: build-and-publish
       - name: Check out the repository
         uses: actions/checkout@v3
         with:

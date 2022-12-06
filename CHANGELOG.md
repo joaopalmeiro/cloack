@@ -9,3 +9,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - Boilerplate to create a Python package.
+- Function to truncate datetimes.
+- Test suite for the function to truncate datetimes.

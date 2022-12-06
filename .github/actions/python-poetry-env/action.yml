@@ -1,0 +1,32 @@
+# https://docs.github.com/en/actions/creating-actions/about-custom-actions#composite-actions
+# https://docs.github.com/en/actions/creating-actions/about-custom-actions#choosing-a-location-for-your-action
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#outputs-for-docker-container-and-javascript-actions
+# https://python-poetry.org/docs/#installation
+# https://python-poetry.org/docs/managing-environments/#displaying-the-environment-information
+# https://github.com/woltapp/wolt-python-package-cookiecutter/blob/master/%7B%7Bcookiecutter.project_slug%7D%7D/.github/actions/python-poetry-env/action.yml
+
+name: "python-poetry-env"
+description: "Setup Python + Poetry environment"
+
+inputs:
+  python-version:
+    required: false
+    description: "Python version"
+    default: "3.7"
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-python@v3
+      with:
+        python-version: ${{inputs.python-version}}
+    - name: Install Poetry
+      run: curl -sSL https://install.python-poetry.org | python3 - --version 1.2.2
+      shell: bash
+    - name: Create virtual environment
+      run: poetry install
+      shell: bash
+    - name: Display environment information
+      run: poetry env info
+      shell: bash

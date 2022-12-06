@@ -43,6 +43,7 @@ A Python package to truncate dates and times.
   - `poetry new cloack`
   - Check `poetry-core` version: `poetry about`
   - `poetry shell`
+  - `poetry publish --help`
 - `poetry run black --help`
 - `poetry run kacl-cli --help`
 - `poetry run kacl-cli add --help`
@@ -50,3 +51,10 @@ A Python package to truncate dates and times.
 - `poetry run kacl-cli new` or `poetry run kacl-cli new | pbcopy`
   - https://github.com/mschmieder/python-kacl/blob/v0.2.24/kacl/document.py#L426
 - https://python-poetry.org/docs/configuration/#local-configuration
+- GitHub Actions:
+  - [Relies-on](https://github.com/hadialqattan/relies-on)
+  - [Detect and Tag New Version](https://github.com/salsify/action-detect-and-tag-new-version)
+  - [actionlint](https://github.com/rhysd/actionlint):
+    - Online: https://rhysd.github.io/actionlint/
+    - https://github.com/rhysd/actionlint/blob/main/docs/install.md
+    - `brew install actionlint` + `actionlint --help` + `actionlint .github/workflows/*.yml`
